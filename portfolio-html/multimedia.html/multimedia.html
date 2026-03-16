@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page multimédia accessible</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+
+<header>
+<h1>Cours Multimédia Accessible</h1>
+</header>
+
+<main id="main">
+
+<section>
+<h2>Vidéo du cours</h2>
+
+<video controls width="700">
+<source src="video.mp4" type="video/mp4">
+
+<track 
+src="subtitles.vtt"
+kind="subtitles"
+srclang="fr"
+label="Français">
+
+Votre navigateur ne supporte pas la vidéo
+</video>
+
+</section>
+
+
+<section>
+
+<h2>Podcast Audio</h2>
+
+<audio controls aria-label="Podcast sur l'accessibilité">
+
+<source src="podcast.mp3" type="audio/mpeg">
+<source src="podcast.ogg" type="audio/ogg">
+
+Votre navigateur ne supporte pas l'audio
+
+</audio>
+
+</section>
+
+
+<section>
+
+<h2>Transcription</h2>
+
+<p>
+Bienvenue dans ce cours sur l’accessibilité web.
+Dans cette vidéo nous allons apprendre comment rendre une page web accessible
+à tous les utilisateurs, y compris les personnes utilisant un lecteur d’écran.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Galerie d'images</h2>
+
+<div class="gallery">
+
+<img src="img1.jpg" alt="ordinateur portable avec code" loading="lazy">
+
+<img src="img2.jpg" alt="développeur qui travaille" loading="lazy">
+
+<img src="img3.jpg" alt="écran avec code html" loading="lazy">
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Vidéo YouTube</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/dD2EISBDjWM"
+title="Cours HTML"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+
+</main>
+
+<footer>
+
+<p>TP Accessibilité Web</p>
+
+</footer>
+
+</body>
+</html>

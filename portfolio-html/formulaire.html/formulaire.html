@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Formulaire d'inscription</title>
+
+<style>
+body{
+font-family: Arial;
+background:#f4f4f4;
+padding:40px;
+}
+
+form{
+background:white;
+padding:25px;
+border-radius:10px;
+max-width:600px;
+margin:auto;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h2{
+text-align:center;
+}
+
+label{
+display:block;
+margin-top:15px;
+}
+
+input,select,textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+}
+
+button{
+margin-top:20px;
+padding:10px;
+background:#0077ff;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+fieldset{
+margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<form>
+
+<h2>Formulaire d'inscription</h2>
+
+<fieldset>
+<legend>Informations personnelles</legend>
+
+<label>Nom</label>
+<input type="text" name="nom" required>
+
+<label>Prénom</label>
+<input type="text" name="prenom" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Téléphone</label>
+<input type="tel" name="telephone"
+pattern="[0-9]{10}"
+placeholder="0612345678"
+required>
+
+<label>Date de naissance</label>
+<input type="date" name="naissance"
+max="2007-01-01"
+required>
+
+</fieldset>
+
+
+<fieldset>
+<legend>Compte</legend>
+
+<label>Mot de passe</label>
+<input type="password"
+pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+title="Minimum 8 caractères, 1 majuscule et 1 chiffre"
+required>
+
+<label>Confirmer mot de passe</label>
+<input type="password" required>
+
+</fieldset>
+
+
+<fieldset>
+<legend>Informations supplémentaires</legend>
+
+<label>Pays</label>
+<input list="pays" name="pays">
+
+<datalist id="pays">
+<option value="Maroc">
+<option value="France">
+<option value="Espagne">
+<option value="Canada">
+</datalist>
+
+<label>Genre</label>
+
+<input type="radio" name="genre" required> Homme
+<input type="radio" name="genre"> Femme
+
+
+<label>Centres d'intérêt</label>
+
+<input type="checkbox"> Informatique
+<input type="checkbox"> Sport
+<input type="checkbox"> Musique
+<input type="checkbox"> Lecture
+
+
+<label>Biographie</label>
+<textarea maxlength="200"></textarea>
+
+<label>Photo de profil</label>
+<input type="file">
+
+</fieldset>
+
+
+<label>
+<input type="checkbox" required>
+J'accepte les conditions générales
+</label>
+
+
+<button type="submit">S'inscrire</button>
+
+</form>
+
+</body>
+</html>
